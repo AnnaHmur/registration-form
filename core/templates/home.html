@@ -1,9 +1,14 @@
+<!-- templates/home.html -->
 {% extends 'base.html' %}
 {% block title %} Home {% endblock %}
 {% block content %}
 <div class="row">
-    <div class="col-sm-12 mb-3">
-       <h4 class="text-center"> Welcome {{ user.username }} </h4>
-    </div>
+    {% include "profile.html" %}
 </div>
+<button class="btn btn-primary mb-2">
+    <a href="edit/">Edit your profile</a>
+</button>
+<button class="btn btn-primary mb-2">
+    <a href="all/">View other profiles</a>
+</button>
 {% endblock %}

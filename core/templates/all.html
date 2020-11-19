@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} Other registered users {% endblock %}
+{% block content %}
+{% for user in users %}
+  <div class="row">
+    {% include "profile.html" %}
+  </div>
+  <hr>
+{% endfor %}
+{% endblock %}
