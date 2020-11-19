@@ -1,16 +1,8 @@
-<div class="col-sm-6">
-   <div class="col-sm-12 mb-3">
-      <img src="{{ media }}{{ user.userprofile.image }}" height="{{ height }}" width="{{ width }}">
-   </div>
+<div class="col">
+  <div style="border-radius: 50%; margin: 0 auto; width: 200px; height: 200px; background-image: url('{{ media }}{{ user.userprofile.image }}')"></div>
+  <h4 class="text-center full-name">{{ user.first_name }} {{ user.last_name }}</h4>
 </div>
-<div class="col-sm-6">
-   <div class="col-sm-12 mb-3">
-      <h4 class="text-center">{{ user.first_name }}</h4>
-   </div>
-   <div class="col-sm-12 mb-3">
-      <h4 class="text-center">{{ user.last_name}}</h4>
-   </div>
-</div>
-<div class="col-sm-12">
-   <h4 class="text-center">{{ user.userprofile.about}}</h4>
+<div class="col">
+  <h4 class="text-center about">About</h4>
+  <p class="text-muted">{{ user.userprofile.about}}</p>
 </div>

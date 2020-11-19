@@ -5,3 +5,6 @@ myvenv
 db.sqlite3
 /static
 .DS_Store
+/.idea
+/media
+creds.txt

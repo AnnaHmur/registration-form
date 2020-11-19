@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 
-from .models import User, UserProfile
+from .models import User
 from .forms import UserForm, UserProfileForm
 
 
@@ -18,11 +18,7 @@ def home(request):
             last_name=request.user.last_name,
             email=request.user.email)
 
-    return render(request, 'home.html', {
-        'media': settings.MEDIA_URL,
-        'height': settings.IMAGE_HEIGHT,
-        'width': settings.IMAGE_WIDTH,
-    })
+    return render(request, 'home.html', {'media': settings.MEDIA_URL})
 
 
 @login_required
@@ -47,10 +43,7 @@ def edit(request):
 @login_required
 def all_users(request):
     users = User.objects.all()
-    return render(request, 'all.html',
-                  {
-                      'users': users,
-                      'media': settings.MEDIA_URL,
-                      'height': settings.IMAGE_HEIGHT,
-                      'width': settings.IMAGE_WIDTH,
-                  })
+    return render(request, 'all.html', {
+        'users': users,
+        'media': settings.MEDIA_URL,
+    })

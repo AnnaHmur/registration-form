@@ -1,25 +1,40 @@
-img {
-  border: 3px solid #282c34;
-}
-.container-fluid {
-  height: 100vh;
-  background-color: #282c34;
+.container-fluid{
+  max-width: 1600px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .container-fluid > div {
-  width: 85%;
-  min-width: 300px;
-  max-width: 500px;
+  width: 80%;
+  min-width: 640px;
+  max-width: 1280px;
 }
-.card {
-  width: 100%;
+.circle {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.button-edit {
+  margin: 0 auto;
+  display: flex;
+  justify-content: right;
+}
+.navbar {
+  margin-bottom: 20px;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 .social-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.about {
+  margin-bottom: 20px;
+}
+.full-name {
+  margin-top: 20px;
 }
 .btn a, .btn a:hover {
   color: white;
